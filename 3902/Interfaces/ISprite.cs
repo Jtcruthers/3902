@@ -11,6 +11,7 @@ namespace _3902
 {
     public interface ISprite
     {
+        Vector2 Position { get; set; }
         void Update();
         void Draw(SpriteBatch spriteBatch);
     }

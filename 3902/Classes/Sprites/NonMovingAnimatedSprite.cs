@@ -16,8 +16,8 @@ namespace _3902
         private int totalFrames;
         private Vector2 position;
         private Texture2D texture;
-        public Vector2 Position { get { return this.position; } set { this.position = value; } }
-        public Texture2D Texture {  get { return this.texture; } set { this.texture = value; } }
+        public Vector2 Position { get; set; }
+        public Texture2D Texture { get; set; }
 
         public NonMovingAnimatedSprite(Texture2D texture, Vector2 position, int rows, int columns)
         {
@@ -32,7 +32,7 @@ namespace _3902
         public void Update()
         {
             currentFrame++;
-            if (currentFrame == totalFrames)
+            if (currentFrame / 8 == totalFrames)
                 currentFrame = 0;
         }
 
@@ -40,8 +40,8 @@ namespace _3902
         {
             int width = this.texture.Width / columns;
             int height = this.texture.Height / rows;
-            int row = (int)((float)currentFrame / (float)columns);
-            int column = currentFrame % columns;
+            int row = (int)((float)(currentFrame / 8) / (float)columns);
+            int column = (currentFrame / 8 % columns);
 
             Rectangle sourceRectangle = new Rectangle(width * column, height * row, width, height);
             Rectangle destinationRectangle = new Rectangle((int)this.position.X, (int)this.position.Y, width, height);

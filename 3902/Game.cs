@@ -38,17 +38,19 @@ namespace _3902
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            movingAnimatedSprite = new MovingAnimatedSprite(this.Content.Load<Texture2D>("images/megaman"), position, 7, 10);
+            movingAnimatedSprite = new MovingAnimatedSprite(this.Content.Load<Texture2D>("images/megaman_running"), position, 1, 4);
             movingNonAnimatedSprite = new MovingNonAnimatedSprite(this.Content.Load<Texture2D>("images/ghost"), position);
-            nonMovingAnimatedSprite = new NonMovingAnimatedSprite(this.Content.Load<Texture2D>("images/dancing"), position, 10, 8);
-            nonMovingNonAnimatedSprite = new NonMovingNonAnimatedSprite(this.Content.Load<Texture2D>("images/standing"), position);
+            nonMovingAnimatedSprite = new NonMovingAnimatedSprite(this.Content.Load<Texture2D>("images/megaman_dancing"), position, 1, 8);
+            nonMovingNonAnimatedSprite = new NonMovingNonAnimatedSprite(this.Content.Load<Texture2D>("images/megaman_standing"), position);
         }
 
         protected override void Update(GameTime gameTime)
         {
             keyboardController.Update();
             if (sprite != null)
+            {
                 sprite.Update();
+            }
             base.Update(gameTime);
         }
 

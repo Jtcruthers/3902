@@ -12,8 +12,8 @@ namespace _3902
     {
         private Vector2 position;
         private Texture2D texture;
-        public Vector2 Position { get { return this.position; } set { this.position = value; } }
-        public Texture2D Texture { get { return this.texture; } set { this.texture = value; } }
+        public Vector2 Position { get; set; }
+        public Texture2D Texture { get; set; }
 
         public MovingNonAnimatedSprite(Texture2D texture, Vector2 position)
         {
