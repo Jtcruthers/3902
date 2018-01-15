@@ -41,13 +41,18 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Classes\GamePadController.cs" />
-    <Compile Include="Classes\KeyboardController.cs" />
-    <Compile Include="Classes\MovingAnimatedSprite.cs" />
-    <Compile Include="Classes\MovingNonAnimatedSprite.cs" />
-    <Compile Include="Classes\NonMovingAnimatedSprite.cs" />
-    <Compile Include="Classes\NonMovingNonAnimatedSprite.cs" />
-    <Compile Include="Game1.cs" />
+    <Compile Include="Classes\Commands\QuitCommand.cs" />
+    <Compile Include="Classes\Commands\SetNonMovingAnimatedCommand.cs" />
+    <Compile Include="Classes\Commands\SetMovingAnimatedCommand.cs" />
+    <Compile Include="Classes\Commands\SetNonMovingNonAnimatedCommand.cs" />
+    <Compile Include="Classes\Commands\SetMovingNonAnimatedCommand.cs" />
+    <Compile Include="Classes\Controllers\GamePadController.cs" />
+    <Compile Include="Classes\Controllers\KeyboardController.cs" />
+    <Compile Include="Classes\Sprites\MovingAnimatedSprite.cs" />
+    <Compile Include="Classes\Sprites\MovingNonAnimatedSprite.cs" />
+    <Compile Include="Classes\Sprites\NonMovingAnimatedSprite.cs" />
+    <Compile Include="Classes\Sprites\NonMovingNonAnimatedSprite.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IController.cs" />
     <Compile Include="Interfaces\ISprite.cs" />

@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
-namespace _3902.Interfaces
+namespace _3902
 {
-    interface ISprite
+    public interface ISprite
     {
+        void Update();
+        void Draw(SpriteBatch spriteBatch);
     }
+
 }
