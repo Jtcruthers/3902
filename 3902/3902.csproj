@@ -41,6 +41,12 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Classes\GamePadController.cs" />
+    <Compile Include="Classes\KeyboardController.cs" />
+    <Compile Include="Classes\MovingAnimatedSprite.cs" />
+    <Compile Include="Classes\MovingNonAnimatedSprite.cs" />
+    <Compile Include="Classes\NonMovingAnimatedSprite.cs" />
+    <Compile Include="Classes\NonMovingNonAnimatedSprite.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IController.cs" />
